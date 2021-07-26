@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="common" template="/WEB-INF/layouts/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+		<put-attribute name="sideBar" value="/WEB-INF/layouts/sideBar.jsp" />
+	</definition>
+
+	<definition name="index" template="/WEB-INF/layouts/classichome.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+		<put-attribute name="sideBar" value="/WEB-INF/layouts/sideBar.jsp" />
+		<put-attribute name="title" value="Jobs in Ethiopia " />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="current" value="home" />
+	</definition>
+	
+	<definition name="jobs" extends="common">
+		<put-attribute name="title" value="New Jobs" />
+		<put-attribute name="body" value="/WEB-INF/jsp/jobs.jsp" />
+		<put-attribute name="current" value="jobs" />
+	</definition>
+	
+	<definition name="companypage" extends="common">
+		<put-attribute name="title" value="Company Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/companydeatil.jsp" />
+		<put-attribute name="current" value="company" />
+	</definition>
+
+	<definition name="users" extends="common">
+		<put-attribute name="title" value="Users List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+
+	<definition name="userDetail" extends="common">
+		<put-attribute name="title" value="User Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-detail.jsp" />
+		<put-attribute name="current" value="userDetail" />
+	</definition>
+
+	<definition name="employee-detail" extends="common">
+		<put-attribute name="title" value="Employee Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employee-detail.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	
+	<definition name="employee-detail-cv" extends="common">
+		<put-attribute name="title" value="Employee Curriculum Vitae" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employee-detailCV.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	
+	<definition name="employee-detail-account" extends="employee-detail">
+		<put-attribute name="title" value="Employee Account" />
+		<put-attribute name="current" value="account" />
+	</definition>
+
+	<definition name="employer-detail" extends="common">
+		<put-attribute name="title" value="Employer Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employer-detail.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	<definition name="employer-detail-account" extends="employer-detail">
+		<put-attribute name="title" value="Employer Account" />
+		<put-attribute name="current" value="account" />
+	</definition>
+	<definition name="user-register" extends="common">
+		<put-attribute name="title" value="User Register" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-register.jsp" />
+		<put-attribute name="current" value="register" />
+	</definition>
+	<definition name="incomplet-user" extends="common">
+		<put-attribute name="title" value="Incomplete User" />
+		<put-attribute name="body" value="/WEB-INF/jsp/incomplete-user.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	<definition name="incomplet-user-account" extends="incomplet-user">
+		<put-attribute name="title" value="Incomplete User Account" />
+		<put-attribute name="current" value="account" />
+	</definition>
+	<definition name="employerPosts" extends="common">
+		<put-attribute name="title" value="Job Posts" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employerDetail/jobPosts.jsp" />
+		<put-attribute name="current" value="employerPosts" />
+	</definition>
+
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="current" value="login" />
+	</definition>
+	<definition name="jquery" extends="common">
+		<put-attribute name="title" value="JQuery Test" />
+		<put-attribute name="current" value="jquery" />
+		<put-attribute name="body" value="/WEB-INF/jsp/jquery.jsp" />
+	</definition>
+	<definition name="previewJob" extends="common">
+		<put-attribute name="title" value="Job Detail" />
+		<put-attribute name="current" value="previewJob" />
+		<put-attribute name="body" value="/WEB-INF/jsp/jobPost.jsp" />
+	</definition>
+	<definition name="applyforjob" extends="common">
+		<put-attribute name="title" value="Job Application" />
+		<put-attribute name="current" value="previewJob" />
+		<put-attribute name="body" value="/WEB-INF/jsp/application.jsp" />
+	</definition>
+	<definition name="applicationsDetail" extends="common">
+		<put-attribute name="title" value="Application Detail" />
+		<put-attribute name="current" value="applicationsDetail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/applicationsDetail.jsp" />
+	</definition>
+</tiles-definitions>
